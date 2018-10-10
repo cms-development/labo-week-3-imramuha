@@ -5,6 +5,7 @@
       <div class="row">
       <div class="col-sm-4">
         <small>ID: {{recipe.id}}</small>
+        Content:{{recipe.content.rendered}}
         <li *ngFor="let ingredient of recipe.ingredients"> {{ingredient}}</li>
       </div>
     </div>
