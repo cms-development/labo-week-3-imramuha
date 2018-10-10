@@ -1,0 +1,11 @@
+<div>The recipe you opened is</div>
+<div *ngIf="!recipe" class="container">{{message}}</div>
+<div *ngIf="recipe" class="container">
+    <h5>{{recipe.title.rendered | uppercase}}</h5>
+      <div class="row">
+      <div class="col-sm-4">
+        <small>ID: {{recipe.id}}</small>
+        <li *ngFor="let ingredient of recipe.ingredients"> {{ingredient}}</li>
+      </div>
+    </div>
+  </div>

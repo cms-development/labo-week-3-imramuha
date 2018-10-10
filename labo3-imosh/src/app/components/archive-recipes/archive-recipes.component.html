@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>My Recipes - Can momenteel ALLEN IDs tonen</h2>
+    <div class="row">
+    <div *ngFor="let recipe of recipes" class="col-sm-4">
+       <a routerLink="/recipes/recipe/{{recipe.id}}"><small>ID: {{recipe.id}}</small> <h5>{{recipe.title.rendered | uppercase}}</h5></a> 
+      <li *ngFor="let ingredient of recipe.ingredients"> {{ingredient}}</li>
+    </div>
+  </div>
+</div>
